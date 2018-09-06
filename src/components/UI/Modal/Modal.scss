@@ -1,0 +1,34 @@
+@import '../../../assets/scss/settings.scss';
+
+.Modal {
+    position: fixed;
+    z-index: 9;
+    background-color: white;
+    width: 70%;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px black;
+    padding: 1.6rem;
+    left: 15%;
+    top: 30%;
+    box-sizing: border-box;
+    transition: all 0.3s ease-out;
+
+    > h3 {
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin-top: .8rem;
+    }
+
+    > p {
+        margin: 1rem 0;
+    }
+
+    li {
+        margin-bottom: .3rem;
+    }
+
+    @include breakpoint(desktop) {
+        width: 50rem;
+        left: calc(50% - 25rem);
+    }
+}

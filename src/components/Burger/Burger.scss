@@ -1,0 +1,19 @@
+@import '../../assets/scss/settings.scss';
+
+.Burger {
+    width: 100%;
+    margin: auto;
+    height: 30rem;
+    overflow-y: auto;
+
+    > p {
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    @include breakpoint(desktop) {
+        width: 70rem;
+        height: 60rem;
+    }
+}
