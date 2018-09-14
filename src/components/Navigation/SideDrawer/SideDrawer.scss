@@ -1,0 +1,30 @@
+@import '../../../assets/scss/settings.scss';
+
+.SideDrawer {
+    z-index: 6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 28rem;
+    max-width: 70%;
+    height: 100%;
+    background-color: white;
+    padding: 3.2rem 1.6rem;
+    transition: transform .3s ease-out;
+
+    @include breakpoint(desktop) {
+        display: none;
+    }
+
+    .Logo {
+        height: 11%;
+    }
+}
+
+.Open {
+    transform: translateX(0);
+}
+
+.Close {
+    transform: translateX(-100%);
+}
