@@ -44,9 +44,9 @@ class BurgerBuilder extends Component {
         };
         updatedIngredients[type] = newCount;
 
-        this.setState((state, props) => ({
+        this.setState((prevState) => ({
             ingredients: updatedIngredients,
-            totalPrice: state.totalPrice + INGREDIENT_PRICES[type]
+            totalPrice: prevState.totalPrice + INGREDIENT_PRICES[type]
         }));
         this.updatePurchaseState(updatedIngredients);
     }
@@ -62,9 +62,9 @@ class BurgerBuilder extends Component {
         };
         updatedIngredients[type] = newCount;
 
-        this.setState((state, props) => ({
+        this.setState((prevState) => ({
             ingredients: updatedIngredients,
-            totalPrice: state.totalPrice - INGREDIENT_PRICES[type]
+            totalPrice: prevState.totalPrice - INGREDIENT_PRICES[type]
         }));
         this.updatePurchaseState(updatedIngredients);
     }

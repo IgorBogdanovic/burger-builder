@@ -1,7 +1,14 @@
+@import '../../../assets/scss/settings.scss';
+
 .NavigationItems {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-flow: column;
     align-items: center;
     height: 100%;
+
+    @include breakpoint(desktop) {
+        flex-flow: row;
+    }
 }
